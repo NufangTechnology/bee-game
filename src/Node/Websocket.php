@@ -2,13 +2,14 @@
 
 namespace Bee\Game\Node;
 
+use Swoole\WebSocket\Frame;
 use Bee\Server\CustomProcess;
 use Bee\Game\Context;
 use Bee\Game\Application;
 use Bee\Game\Code;
 
 /**
- * Websocket 服务基类
+ * Websocket server
  *
  * @package Bee\Game\Node
  */
@@ -20,11 +21,12 @@ class Websocket extends \Bee\Server\Websocket
     /** @var ClientPool */
     protected $clientPool;
 
-    /**
-     * 自定义进程初始化
-     *
-     * @return void
-     */
+	/**
+	 * 自定义进程初始化
+	 *
+	 * @return void
+	 * @throws \Bee\Server\Exception
+	 */
     public function init()
     {
         // 初始化当前服务通信进程
@@ -43,7 +45,7 @@ class Websocket extends \Bee\Server\Websocket
     /**
      * 客户端连接打开时回调
      *
-     * @param \Bee\Server\Websocket $server
+     * @param \Swoole\WebSocket\Server $server
      * @param \Swoole\Http\Request $request
      * @return void
      */
