@@ -1,4 +1,7 @@
 {
+    "name": "bee-framework/game",
+    "description": "Bee框架游戏组件",
+    "type": "library",
     "require": {
         "ext-json": "*",
         "bee-framework/server": "dev-dev",
@@ -9,5 +12,6 @@
         "psr-4": {
             "Bee\\Game\\": "./src"
         }
-    }
+    },
+    "license": "MIT"
 }
