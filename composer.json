@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "ext-json": "*",
-        "bee-framework/server": "dev-dev",
+        "bee-framework/server": "dev-master",
         "bee-framework/router": "^1.2"
     },
     "autoload": {
