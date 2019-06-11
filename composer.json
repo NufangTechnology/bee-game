@@ -5,7 +5,6 @@
     "require": {
         "ext-json": "*",
         "bee-framework/server": "dev-dev",
-        "easyswoole/actor": "2.x-dev",
         "bee-framework/router": "^1.2"
     },
     "autoload": {
